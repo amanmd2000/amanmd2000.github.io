@@ -1,0 +1,85 @@
+<!--These files have been modified for class
+by Aaron White
+WEBD-225-40, Week 2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content=" Reservations page for Pacific Trails Resort. Set a reservation
+  at a luxurious resort in California.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacific Trails Resort :: Reservations</title>
+  <link rel="stylesheet" href="pacific2.css">
+  <script src="js/pacific.js" defer></script>
+  <!-- Script for Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/ab80b159ca.js" crossorigin="anonymous"></script>
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Completed files -->
+</head>
+
+<body>
+<div id="page4">
+<div id="wrapper"> <!-- For CSS -->
+  <header>
+    <h1>Pacific Trails Resort</h1>
+  </header>
+
+  <nav>
+    <input type="checkbox" id="siteLinks">
+    <label for="siteLinks"></label>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="yurts.html">Yurts</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+      </ul>
+  </nav>
+
+  <!-- No <div id="reservationhero"></div> ? -->
+  <main>
+    <h2>Reservations at Pacific Trails</h2>
+
+    <h3>Contact Us</h3>
+    <!-- Added class "req" for CSS on required '*' -->
+    <p>Required information is marked with an asterisk (<span class="req">*</span>).</p>
+
+    <form id="reservation" method="post" action="http://webdevbasics.net/scripts/pacific.php">
+      <label for="myFName"><span class="req">*</span> First Name:</label>
+
+      <input type="text" name="myFName" id="myFName" required="required">
+
+      <label for="myLName"><span class="req">*</span> Last Name:</label>
+      <input type="text" name="myLName" id="myLName" required="required">
+
+      <label for="myEmail"><span class="req">*</span> E-mail:</label>
+      <input type="email" name="myEmail" id="myEmail" required="required">
+
+      <label for="myPhone">Phone:</label>
+      <input type="tel" name="myPhone" id="myPhone">
+
+      <label for="myDate">Arrival Date:</label>
+      <input type="date" name="myDate" id="myDate">
+
+      <label for="myNights">Nights:</label>
+      <input type="number" name="myNights" id="myNights" min="1" max="14">
+
+      <label for="myComments"><span class="req">*</span> Comments:</label>
+      <textarea name="myComments" id="myComments" rows="2" cols="20" required="required"></textarea>
+
+      <input type="submit" id="mySubmit" value="Submit">
+    </form>
+  </main>
+
+  <footer>
+    Copyright © 2016 Pacific Trails Resort<br>
+    <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+  </footer>
+</div> <!--end of wrapper-->
+</div> <!--end of page-->
+</body>
+</html>

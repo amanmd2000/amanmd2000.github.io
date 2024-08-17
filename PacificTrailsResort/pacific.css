@@ -1,0 +1,306 @@
+/*
+by Aaron White
+WEBD-225-40, Week 6
+ */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+3&display=swap');
+
+/* --NOT USED -- TOO BUSY-- */
+/* animation to slide from left across page to right and back to left */
+@keyframes slideInLeftAcross {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(98%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* End of animation */
+
+/* animation to slide from left to right (preferred) */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* End of animation */
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: linear-gradient(to top, #728474 30%, #003a62 42%, #003a62 78%, #eeeff1 90%) fixed;
+    height: 100vh;
+}
+
+#wrapper {
+    margin: 1% 5%;
+    background-color: hsla(0, 1%, 95%, 0.7);
+}
+
+header {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    height: 9vh;
+    font-size: 1.5em;
+    margin: 0 1%;
+}
+
+li {
+    padding-bottom: .5em;
+}
+
+.resort {
+    font-weight: bold;
+}
+
+/* --Navigation-- */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+}
+nav ul li {
+    flex: 1;
+    width: 110px;
+    font-size: 1.25em;
+    text-align: center;
+    align-content: center;
+    list-style-type: none;
+    background: linear-gradient(hsla(204,100%,19%,0.7), hsla(204,100%,19%,1.00) 50%);
+    margin: 0 1.1vh 1.1vh;
+    padding: 1.1vh;
+    border: 2px solid #003a62;
+    border-radius: 10px;
+}
+nav ul li a {
+    color: #eeeff1;
+    text-transform: lowercase;
+}
+nav ul li a:hover {
+    color: #003a62;
+    font-weight: bolder;
+    text-shadow: 0 3px 6px #eeeff1, 0 -3px 6px #eeeff1, 3px 0 6px #eeeff1, -3px 0 3px #eeeff1;
+}
+/* --End of Navigation-- */
+
+main {
+    margin: 1%;
+}
+
+video {
+    border-radius: 10px;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+/* --Form fields-- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+#reservation {
+    flex: 1;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    width: 300px;
+}
+input {
+    border-color: #003a62;
+    border-radius: .5em;
+    border-width: 3px;
+    height: 1.125em;
+    margin-bottom: 10px;
+}
+#mySubmit {
+    height: 2em;
+    width: auto;
+    margin: 5% 30%;
+}
+textarea {
+    border-color: #003a62;
+    border-radius: .5em;
+    border-width: 3px;
+}
+/* --End of Form fields-- */
+
+/* --Pricing Table-- */
+table {
+    display: flex;
+}
+table th {
+    flex: 1;
+    width: auto;
+    padding-left: 1em;
+}
+table td {
+    flex: 1;
+    width: auto;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+table td:nth-child(3) {
+    text-align: center;
+}
+table td:last-child {
+    text-align: center;
+}
+/* --End of Pricing Table-- */
+
+/* week 6 */
+#mobile {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    height: 100px;
+    justify-content: center;
+    padding-left: 1%;
+    background: linear-gradient(#728474 5%, hsla(0, 1%, 95%, 0.1) 30%, hsla(0, 1%, 95%, 0.1) 70%, #728474 95%);
+}
+
+/* Week 6 added image height ratio */
+#homehero {
+    height: 306px;
+    animation: 2.5s ease-in-out 0s 1 slideInLeft;
+    background: #003a62 url("coast.jpg") no-repeat left;
+    margin-left: 20px;
+}
+
+#yurthero {
+    height: 306px;
+    animation: 2.5s ease-in-out 0s 1 slideInLeft;
+    background: #003a62 url("yurt.jpg") no-repeat left;
+    margin-left: 20px;
+}
+
+#trailhero {
+    height: 306px;
+    animation: 2.5s ease-in-out 0s 1 slideInLeft;
+    background: #003a62 url("trail.jpg") no-repeat left;
+    margin-left: 20px;
+}
+
+/* --Red highlighting for 'required' class and attribute-- */
+.req {
+    color: red;
+    font-style: normal;
+    font-weight: bold;
+}
+input:required {
+    border-color: red;
+}
+textarea:required {
+    border-color: red;
+}
+/* --End of Red highlighting for 'required' class and attribute-- */
+
+@media screen and (max-width: 1024px) {
+    #wrapper {
+        margin: 0 2%;
+    }
+    header {
+        height: 3.5em;
+    }
+    /* --Navigation-- */
+    nav ul {
+        width: 90%;
+    }
+    nav ul li {
+        font-size: 1.5em;
+        margin: -2% 1% 1%;
+        padding: .5%;
+    }
+    /* --End of Navigation-- */
+
+    #homehero {
+        margin-left: 0;
+    }
+    #yurthero {
+        margin-left: 0;
+    }
+    #trailhero {
+        margin-left: 0;
+    }
+
+    #mobile {
+        display: revert;
+    }
+    #desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #wrapper {
+        margin: 0 1% 1%;
+    }
+    header {
+        font-size: 1.25em;
+    }
+
+/* --Navigation-- */
+    nav ul {
+        width: 95%;
+        margin-left: -6%;
+    }
+    nav ul li {
+        width: 130px;
+        font-size: 1.5em;
+        margin: -2% 1% 0;
+        padding: .5%;
+    }
+/* --End of Navigation-- */
+
+    #homehero {
+        width: auto;
+    }
+    #yurthero {
+        width: auto;
+    }
+    #trailhero {
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #wrapper {
+        margin: 0 .5%;
+    }
+    header {
+        height: 2.5em;
+        font-size: 1.05em;
+    }
+
+    /* --Navigation-- */
+    nav ul {
+        margin-left: -8%;
+    }
+    nav ul li {
+        margin: 1% 1% 0;
+    }
+    /* --End of Navigation-- */
+    form {
+    font-size: 1.25em;
+    }
+}
+    input {
+        font-size: 1.25em;
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        height: 2em;
+        font-size: .95em;
+    }
+}

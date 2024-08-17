@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 01-30-2024 rev 1
+# The items below will be cached. If you use an asterisk it will attempt to cache all
+# items. Some browsers have a limit of 5MB of storage allowed for each site.
+
+reservations.html
+# the network reference below tells the browser to never cache what is below that
+NETWORK:
+yurts.html # Do not cache as prices are subject to change
+
+# the fallback reference below tells the browser what to use in the event that the
+# content isn’t cached and the page is being viewed off line
+FALLBACK:
+/html/ /fallback.html

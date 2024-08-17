@@ -1,0 +1,456 @@
+/*
+by Aaron White
+WEBD-225-40, Week 7
+Device-Specific Layouts
+Mobile-first, starting w/ 320px
+Added @media 1366px
+ */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+3&display=swap');
+
+/* general reset/setup styling for icons - needed on all */
+nav label::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+nav label::before {
+    font: var(--fa-font-solid);
+}
+nav label::before {
+    content: "\f0c9";
+}
+nav input:checked +label::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+nav input:checked +label::before {
+    font: var(--fa-font-solid);
+}
+nav input:checked +label::before {
+    content: "\f00d";
+}
+
+/* animation to slide from left to right (preferred) */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* End of animation */
+
+/* animation to fade in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+/* End of animation */
+
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #003a62;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+#page1 {
+    margin: 0;
+    animation: 2s ease-in-out 0s 1 slideInLeft;
+    background-color: #003a62;
+    background-image: url("coast.jpg");
+    background-origin: border-box;
+    background-position: left top;
+    background-size: auto, 306px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#page2 {
+    margin: 0;
+    animation: 2s ease-in-out 0s 1 slideInLeft;
+    background-color: #003a62;
+    background-image: url("yurt.jpg");
+    background-origin: border-box;
+    background-position: left top;
+    background-size: auto, 306px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#page3 {
+    margin: 0;
+    animation: 2s ease-in-out 0s 1 slideInLeft;
+    background-color: #003a62;
+    background-image: url("trail.jpg");
+    background-origin: border-box;
+    background-position: left top;
+    background-size: auto, 306px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#page4 {
+    margin: 0;
+    animation: 2s ease-in-out 0s 1 slideInLeft;
+    background-color: #003a62;
+    background-image: url("coast.jpg");
+    background-origin: border-box;
+    background-position: left top;
+    background-size: auto, 306px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#wrapper {
+    animation: 3s ease-in 0s 1 fadeIn;
+    margin: 2% 2%;
+    background-color: hsla(0, 1%, 95%, 0.7);
+}
+
+header {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    height: 2em;
+    font-size: .8em;
+    margin: 0 1%;
+}
+
+main, section {
+    max-width: 800px;
+    margin: 1%;
+}
+
+li {
+    padding-bottom: .5em;
+}
+
+#page1 h3 {
+    font-size: .95em;
+}
+
+.resort {
+    font-weight: bold;
+}
+
+/* --Navigation-- */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 150px;
+}
+nav ul li {
+    flex: 1;
+    font-size: 1.1em;
+    text-align: left;
+    align-content: flex-start;
+    list-style-type: none;
+    background: linear-gradient(hsla(204,100%,19%,0.7), hsla(204,100%,19%,1.00) 50%);
+    margin-left: -1em;
+    padding: 0;
+    display: none;
+}
+nav ul li a {
+    color: #eeeff1;
+    text-transform: lowercase;
+}
+nav label {
+    padding-top: .25em;
+    font-size: 1.5em;
+    color: #003a62;
+    display: block;
+    cursor: pointer;
+    margin-left: .25em;
+}
+nav input:checked +label::before {
+    font-size: 1.5em;
+    color: #003a62;
+    display: block;
+    cursor: pointer;
+    margin-left: .25em;
+}
+nav input:checked ~ ul li {
+    display: revert;
+    padding: 2px;
+}
+nav input{
+    display: none;
+}
+nav ul li a:hover {
+    color: #003a62;
+    font-weight: bolder;
+    text-shadow: 0 3px 6px #eeeff1, 0 -3px 6px #eeeff1, 3px 0 6px #eeeff1, -3px 0 3px #eeeff1;
+}
+nav ul li a:active {
+    color: #003a62;
+    font-weight: bolder;
+    text-shadow: 0 3px 6px #eeeff1, 0 -3px 6px #eeeff1, 3px 0 6px #eeeff1, -3px 0 3px #eeeff1;
+}
+
+/* --End of Navigation-- */
+
+video {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+/* --Form fields-- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+#reservation {
+    flex: 1;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    width: 250px;
+}
+input {
+    border-color: #003a62;
+    border-radius: .5em;
+    border-width: 3px;
+    height: 1.125em;
+    margin-bottom: 10px;
+}
+#mySubmit {
+    height: 2em;
+    width: auto;
+    margin: 5% 30%;
+}
+textarea {
+    border-color: #003a62;
+    border-radius: .5em;
+    border-width: 3px;
+}
+/* --End of Form fields-- */
+
+/* --Pricing Table-- */
+table {
+    display: flex;
+    flex-wrap: wrap;
+}
+table th {
+    flex: 1;
+    width: auto;
+    background: #eeeff1;
+}
+table td {
+    flex: 1;
+    width: auto;
+    padding-bottom: 1em;
+    background: #728474;
+    color: #eeeff1;
+}
+table td:first-child {
+    background: #003a62;
+}
+table td:nth-child(3) {
+    text-align: center;
+}
+table td:last-child {
+    text-align: center;
+}
+/* --End of Pricing Table-- */
+
+#desktop {
+    display: none;
+}
+
+footer {
+    color: #eeeff1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    padding-left: 1%;
+    background: #003a62;
+}
+footer a {
+    color: #eeeff1;
+}
+
+/* --Red highlighting for 'required' class and attribute-- */
+.req {
+    color: red;
+    font-style: normal;
+    font-weight: bold;
+}
+input:required {
+    border-color: red;
+}
+textarea:required {
+    border-color: red;
+}
+/* --End of Red highlighting for 'required' class and attribute-- */
+
+
+@media all and (min-width: 480px) {
+    #page1 h3 {
+        font-size: 1em;
+    }
+}
+
+@media all and (min-width: 768px) {
+    header {
+        font-size: 1.5em;
+    }
+    nav label {
+        display: none;
+    }
+    nav ul {
+        flex-direction: row;
+        max-width: 100%;
+        background: #003a62;
+        margin-bottom: 0;
+    }
+    nav ul li {
+        text-align: start;
+        background: none;
+        margin-left: 0;
+        padding: .25em;
+        display: revert;
+    }
+    nav ul li a {
+        text-transform: uppercase;
+    }
+    #reservation {
+        width: 300px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    #mobile {
+        display: none;
+    }
+    #desktop {
+        display: revert;
+    }
+    nav ul li {
+        margin-left: 2.5em;
+    }
+    #page1, #page2, #page3, #page4 {
+        animation: none;
+        background: none;
+        max-width: 1200px;
+        margin: auto;
+    }
+    #wrapper {
+        animation: none;
+    }
+
+    #homehero {
+        height: 360px;
+        animation: 2.5s ease-in-out 0s 1 slideInLeft;
+        background-color: #003a62;
+        background-image: url("coast.jpg");
+        background-origin: border-box;
+        background-position: center center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    #yurthero {
+        height: 360px;
+        animation: 2.5s ease-in-out 0s 1 slideInLeft;
+        background-color: #003a62;
+        background-image: url("yurt.jpg");
+        background-origin: border-box;
+        background-position: center center;
+        background-size: 102% auto;
+        background-repeat: no-repeat;
+    }
+
+    #trailhero {
+        height: 360px;
+        animation: 2.5s ease-in-out 0s 1 slideInLeft;
+        background-color: #003a62;
+        background-image: url("trail.jpg");
+        background-origin: border-box;
+        background-position: center center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+
+    #page1 h2 {
+        text-align: center;
+    }
+    video {
+        width: 500px;
+        margin-left: calc((100% - 500px) * .5);
+    }
+    main, section {
+        margin: auto;
+    }
+}
+@media all and (min-width: 1366px) {
+    body {
+        background: #003a62;
+    }
+    #page1, #page2, #page3, #page4 {
+        background: none;
+        max-width: 100%;
+        margin: 0;
+    }
+    #wrapper {
+        max-width: 100%;
+        margin: 0;
+        background: none;
+    }
+    header {
+        height: 3em;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: calc((100% - 1200px) * .5);
+        padding-right: calc((100% - 1200px) * .5);
+        background: hsla(0, 1%, 95%, 0.7);
+    }
+    nav ul {
+        max-width: 100%;
+        padding-left: calc((100% - 1200px) * .5);
+        padding-right: calc((100% - 1200px) * .5);
+        background: #003a62;
+        margin: .5em 0;
+    }
+    #homehero, #yurthero, #trailhero {+
+        height: auto;
+        max-width: 100%;
+        background-size: 1200px auto;
+    }
+    main {
+        margin: 0;
+        max-width: 100%;
+        padding-left: calc((100% - 1000px) * .5);
+        padding-right: calc((100% - 1000px) * .5);
+        background: hsla(0, 1%, 95%, 0.7);
+    }
+    section {
+        margin: 0;
+        max-width: 100%;
+        padding-left: calc((100% - 1200px) * .5);
+        padding-right: calc((100% - 1200px) * .5);
+    }
+    footer {
+        padding-left: calc((100% - 1000px) * .5);
+    }
+}

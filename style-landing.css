@@ -31,4 +31,6 @@ a {
 
 footer {
     height: 200px;
+    margin-left: 0px;
+    justify-content: end;
 }

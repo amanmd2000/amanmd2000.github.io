@@ -16,7 +16,7 @@ h1 {
     height: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 h2 {
     display: flex;

@@ -31,6 +31,6 @@ a {
 
 footer {
     height: 200px;
-    margin-left: 50px;
+    padding-left: 50px;
     justify-content: end;
 }

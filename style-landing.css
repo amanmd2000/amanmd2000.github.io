@@ -31,7 +31,8 @@ a {
 
 footer {
     height: 200px;
-    display: flex;
+    padding-left: 10px;
+    /* display: flex; */
     /* align-items: center;
     justify-content: center; */
 }

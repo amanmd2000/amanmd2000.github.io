@@ -17,6 +17,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: left;
+    padding-left: 100px;
 }
 h2 {
     display: flex;

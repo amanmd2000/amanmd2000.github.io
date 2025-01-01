@@ -1,0 +1,68 @@
+/* Provides for floating return to main
+rotate <i class="fa-solid fa-arrow-rotate-left"></i> "f060"
+arrow left <i class="fa-solid fa-arrow-left"></i> "f0e2"
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+3&display=swap"); /*regular font*/
+@import url("https://kit.fontawesome.com/ab80b159ca.js"crossorigin="anonymous"); /*icons*/
+
+/* setup styling for icon */
+.return-button::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.return-button::before {
+    font: var(--fa-font-solid);
+}
+.return-button::before {
+    content: "\f060";
+}
+/* icon end */
+
+
+.return-button {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 12px;
+  opacity: 50%;
+  position: fixed;
+  right: 50%;
+  top: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px white, 0 -3px 6px white, 3px 0 6px white, -3px 0 3px white;
+  width: 5rem;
+  line-height: 1rem;
+  height: 1.5rem;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  word-break: break-all;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+.return-button:hover {
+  opacity: 100%;
+  font-weight: bolder;
+  overflow: visible; 
+  white-space: normal; 
+  height: auto;
+  padding: .25rem .25rem .5rem .25rem;
+}
+
+.return-button a:active {
+  opacity: 100%;
+  font-weight: bolder;
+  overflow: visible; 
+  white-space: normal; 
+  height: auto;
+  padding: .25rem;
+}
+
+.return-button a {
+  opacity: 100%;
+  font-weight: bolder;
+  overflow: visible; 
+  white-space: normal; 
+  height: auto;
+  padding: .25rem;
+}

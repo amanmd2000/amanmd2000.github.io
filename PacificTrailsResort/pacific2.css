@@ -334,7 +334,7 @@ textarea:required {
         text-transform: uppercase;
     }
     #reservation {
-        width: 300px;
+        width: 306px;
     }
 }
 
@@ -432,7 +432,7 @@ textarea:required {
         background: #003a62;
         margin: .5em 0;
     }
-    #homehero, #yurthero, #trailhero {+
+    #homehero, #yurthero, #trailhero {
         height: auto;
         max-width: 100%;
         background-size: 1200px auto;

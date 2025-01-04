@@ -10,6 +10,7 @@
    Post class work: Added input validation
 */
 (function () {
+    import("../FloatingReturn.js"); //import JS return button
     const main = document.querySelector("main"); //for placing new HTML
     const formBtn = document.getElementById("btn-contact");
     const form = document.getElementById("newForm");

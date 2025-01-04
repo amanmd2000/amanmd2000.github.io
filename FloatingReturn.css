@@ -2,15 +2,13 @@
 rotate <i class="fa-solid fa-arrow-rotate-left"></i> "f060"
 arrow left <i class="fa-solid fa-arrow-left"></i> "f0e2"
 */
-@font-face {
-  font-family: "Source Sans 3";
-  src: url("https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+3&display=swap");
-} /*regular font*/
 
-@font-face {
-  font-family: "FontAwesome";
-  src: url("https://kit.fontawesome.com/ab80b159ca.js");
-} /*icons*/
+.oswald-RegFont {
+  font-family: "Oswald";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} /* regular font */
 
 /* setup styling for icon */
 #return-button::before {
@@ -26,14 +24,14 @@ arrow left <i class="fa-solid fa-arrow-left"></i> "f0e2"
 /* icon end */
 
 #return-button {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1rem;
   position: fixed;
   right: 5%;
   top: 1rem;
   border-radius: 50%;
   box-shadow: 0 3px 6px white, 0 -3px 6px white, 3px 0 6px white, -3px 0 3px white;
-  width: 7rem;
+  width: 8rem;
   line-height: 1.25rem;
   height: auto;
   padding: .25rem;
